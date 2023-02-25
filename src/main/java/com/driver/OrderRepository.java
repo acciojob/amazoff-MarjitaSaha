@@ -27,7 +27,8 @@ public class OrderRepository {
     }
     public void addDeliveryPartner(String deliveryPartner)
     {
-        deliveryPartnerMap.put(deliveryPartner.getId(),deliveryPartner);
+        DeliveryPartner d1=new DeliveryPartner(deliveryPartner);
+        deliveryPartnerMap.put(deliveryPartner,d1);
     }
 
     public void addOrderPartnerPair(String orderId,String deliveryId)
