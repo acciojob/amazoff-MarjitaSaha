@@ -1,5 +1,6 @@
 package com.driver;
 
+import io.swagger.models.auth.In;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -30,7 +31,7 @@ public class OrderService {
         DeliveryPartner deliveryPartner=orderRepository.getPartnerById(partnerId);
         return deliveryPartner;
     }
-    public int getOrderCountByPartnerId(String partnerId)
+    public Integer getOrderCountByPartnerId(String partnerId)
     {
         return orderRepository.getOrderCountByPartnerId(partnerId);
     }
@@ -42,11 +43,11 @@ public class OrderService {
     {
         return orderRepository.getAllOrders();
     }
-    public int getCountOfUnassignedOrders()
+    public Integer getCountOfUnassignedOrders()
     {
       return orderRepository.getCountOfUnassignedOrders();
     }
-    public int getOrdersLeftAfterGivenTimeByPartnerId(String time,String partnerId)
+    public Integer getOrdersLeftAfterGivenTimeByPartnerId(String time, String partnerId)
     {
         return orderRepository.getOrdersLeftAfterGivenTimeByPartnerId(time,partnerId);
     }
